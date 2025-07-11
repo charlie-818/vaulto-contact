@@ -326,44 +326,219 @@ export default function IntentForm() {
 
             <div className="modal-body">
               <section className="modal-section">
-                <h2 className="section-title">The Future of Asset Ownership</h2>
+                <h2 className="section-title">
+                  <svg className="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                  </svg>
+                  Asset Tokenization Platform
+                </h2>
                 <p className="section-text">
-                  In our rapidly evolving, computer-powered world, traditional asset ownership is being revolutionized. 
-                  Tokenization represents the next frontier in financial innovation, converting real-world assets into 
-                  digital tokens that can be traded, divided, and accessed globally through blockchain technology.
+                  Transform your high-value assets into digital tokens on the blockchain. Enable fractional ownership, unlock liquidity, and access global capital markets with institutional-grade security.
                 </p>
+                
+                <div className="benefits-grid">
+                  <div className="benefit-item">
+                    <div className="benefit-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9,22 9,12 15,12 15,22"/>
+                      </svg>
+                    </div>
+                    <h3>Real Estate</h3>
+                    <p>Tokenize properties for fractional ownership</p>
+                  </div>
+                  <div className="benefit-item">
+                    <div className="benefit-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <polyline points="21,15 16,10 5,21"/>
+                      </svg>
+                    </div>
+                    <h3>Fine Art</h3>
+                    <p>Digitize artwork and collectibles</p>
+                  </div>
+                  <div className="benefit-item">
+                    <div className="benefit-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                      </svg>
+                    </div>
+                    <h3>Commodities</h3>
+                    <p>Digital exposure to precious metals</p>
+                  </div>
+                  <div className="benefit-item">
+                    <div className="benefit-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                      </svg>
+                    </div>
+                    <h3>Business Assets</h3>
+                    <p>Tokenize revenue streams and IP</p>
+                  </div>
+                </div>
               </section>
 
               <section className="modal-section">
-                <h2 className="section-title">Why Tokenization Matters Now</h2>
-                <p className="section-text">
-                  Transform illiquid assets into tradeable digital tokens, access DeFi protocols for lending and yield generation, 
-                  and enable fractional ownership for broader investment opportunities.
-                </p>
+                <h2 className="section-title">
+                  <svg className="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M9 12l2 2 4-4"/>
+                    <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                    <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                    <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/>
+                    <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/>
+                  </svg>
+                  Key Benefits
+                </h2>
+                
+                <div className="feature-grid">
+                  <div className="feature-card">
+                    <div className="feature-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                      </svg>
+                    </div>
+                    <h3>Instant Liquidity</h3>
+                    <p>Convert illiquid assets into tradeable digital tokens with 24/7 global market access.</p>
+                  </div>
+                  <div className="feature-card">
+                    <div className="feature-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
+                      </svg>
+                    </div>
+                    <h3>Fractional Ownership</h3>
+                    <p>Enable multiple investors to own portions of high-value assets with lower entry barriers.</p>
+                  </div>
+                  <div className="feature-card">
+                    <div className="feature-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                      </svg>
+                    </div>
+                    <h3>Regulatory Compliance</h3>
+                    <p>SEC-compliant tokenization with built-in KYC/AML and investor verification.</p>
+                  </div>
+                </div>
               </section>
 
               <section className="modal-section">
-                <h2 className="section-title">The Vaulto Process</h2>
-                <p className="section-text">
-                  Professional asset evaluation and legal compliance → Custom smart contract development → 
-                  Token issuance with full legal backing → DeFi integration and global trading access.
-                </p>
+                <h2 className="section-title">
+                  <svg className="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                  </svg>
+                  How It Works
+                </h2>
+                
+                <div className="process-steps">
+                  <div className="process-step">
+                    <div className="step-number">1</div>
+                    <div className="step-content">
+                      <h3>Asset Evaluation</h3>
+                      <p>Professional valuation and due diligence to determine tokenization viability</p>
+                    </div>
+                  </div>
+                  <div className="process-step">
+                    <div className="step-number">2</div>
+                    <div className="step-content">
+                      <h3>Legal Structure</h3>
+                      <p>Establish compliant legal framework with proper regulatory protections</p>
+                    </div>
+                  </div>
+                  <div className="process-step">
+                    <div className="step-number">3</div>
+                    <div className="step-content">
+                      <h3>Token Creation</h3>
+                      <p>Deploy secure smart contracts and mint ERC-1400 compliant security tokens</p>
+                    </div>
+                  </div>
+                  <div className="process-step">
+                    <div className="step-number">4</div>
+                    <div className="step-content">
+                      <h3>Market Launch</h3>
+                      <p>List on compliant exchanges with immediate access to global investor base</p>
+                    </div>
+                  </div>
+                </div>
               </section>
 
               <section className="modal-section">
-                <h2 className="section-title">Essential Crypto Exposure</h2>
-                <p className="section-text">
-                  As AI and blockchain reshape global finance, crypto asset exposure is essential for portfolio growth 
-                  and protection. Tokenized assets bridge traditional investments and the digital economy, offering 
-                  unprecedented wealth creation opportunities in our computer-powered world.
-                </p>
+                <h2 className="section-title">
+                  <svg className="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polygon points="12,2 2,7 12,12 22,7 12,2"/>
+                    <polyline points="2,17 12,22 22,17"/>
+                    <polyline points="2,12 12,17 22,12"/>
+                  </svg>
+                  Platform Features
+                </h2>
+                
+                <div className="tech-features">
+                  <div className="tech-feature">
+                    <h4>
+                      <svg className="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <circle cx="12" cy="16" r="1"/>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                      </svg>
+                      Enterprise Security
+                    </h4>
+                    <p>Multi-signature wallets, institutional-grade custody, and 256-bit encryption</p>
+                  </div>
+                  <div className="tech-feature">
+                    <h4>
+                      <svg className="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                      </svg>
+                      Real-Time Analytics
+                    </h4>
+                    <p>Live market data, performance tracking, and comprehensive reporting dashboard</p>
+                  </div>
+                  <div className="tech-feature">
+                    <h4>
+                      <svg className="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                      </svg>
+                      Global Access
+                    </h4>
+                    <p>24/7 trading, cross-border transactions, and multi-currency support</p>
+                  </div>
+                </div>
+                
+                <div className="platform-stats">
+                  <div className="stat-item">
+                    <div className="stat-number">2.5%</div>
+                    <div className="stat-label">Platform Fee</div>
+                  </div>
+                  <div className="stat-item">
+                    <div className="stat-number">2s</div>
+                    <div className="stat-label">Transaction Time</div>
+                  </div>
+                  <div className="stat-item">
+                    <div className="stat-number">99.9%</div>
+                    <div className="stat-label">Uptime SLA</div>
+                  </div>
+                </div>
               </section>
 
               <section className="modal-section final-section">
-                <h2 className="section-title">Ready to Transform Your Assets?</h2>
+                <h2 className="section-title">
+                  <svg className="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                  </svg>
+                  Ready to Get Started?
+                </h2>
                 <p className="section-text">
-                  Join the digital asset revolution. Whether you&apos;re looking to tokenize valuable assets or invest in 
-                  tokenized opportunities, Vaulto provides the expertise and technology to navigate this new frontier safely and profitably.
+                  Transform your assets into digital tokens and unlock new opportunities in the global marketplace. Our platform provides everything you need for secure, compliant tokenization.
                 </p>
                 <button className="modal-cta" onClick={() => setShowModal(false)}>
                   Start Your Tokenization Journey
