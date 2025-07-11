@@ -15,43 +15,8 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Vaulto - Unlock the Future of Your Assets",
-  description: "Vaulto's AI platform transforms real-world assets into liquid digital tokens on the blockchain. Register your interest to see how tokenization can revolutionize your portfolio.",
-  keywords: "tokenization, blockchain, assets, digital tokens, real estate, fine art, investment, AI",
-  authors: [{ name: "Vaulto" }],
-  creator: "Vaulto",
-  publisher: "Vaulto",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  openGraph: {
-    title: "Vaulto - Unlock the Future of Your Assets",
-    description: "Transform real-world assets into liquid digital tokens on the blockchain.",
-    url: "https://vaulto.com",
-    siteName: "Vaulto",
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Vaulto - Unlock the Future of Your Assets",
-    description: "Transform real-world assets into liquid digital tokens on the blockchain.",
-    creator: "@vaulto",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-
+  title: "Vaulto - Asset Tokenization Platform",
+  description: "Transform your high-value assets into digital tokens. Unlock liquidity, enable fractional ownership, and access global capital markets with institutional-grade blockchain technology.",
 };
 
 export default function RootLayout({
@@ -68,6 +33,66 @@ export default function RootLayout({
         <meta name="color-scheme" content="dark" />
       </head>
       <body className={`${inter.className} antialiased`}>
+        {/* Hidden form for Netlify build-time detection */}
+        <form name="intent-form" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+          <input type="text" name="form-name" />
+          <input type="text" name="goal" />
+          <input type="text" name="fullName" />
+          <input type="email" name="email" />
+          <input type="text" name="company" />
+          <input type="tel" name="phone" />
+          <input type="text" name="assetType" />
+          <input type="text" name="assetValue" />
+          <input type="text" name="investment" />
+        </form>
+        
+        {/* Background Elements */}
+        <div className="blockchain-bg">
+          <div className="blockchain-grid"></div>
+          <div className="floating-blocks">
+            <div className="block"></div>
+            <div className="block"></div>
+            <div className="block"></div>
+            <div className="block"></div>
+            <div className="block"></div>
+            <div className="block"></div>
+          </div>
+          <div className="connection-lines">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </div>
+          <div className="token-particles">
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+          </div>
+          <div className="code-matrix">
+            <div className="code-stream">
+              {'function tokenize(asset) {\n  return blockchain.mint(asset);\n}'}
+            </div>
+            <div className="code-stream">
+              {'const value = asset.getValue();\nconst tokens = value / sharePrice;'}
+            </div>
+            <div className="code-stream">
+              {'if (verified) {\n  transfer(tokens, investor);\n}'}
+            </div>
+            <div className="code-stream">
+              {'contract.deploy({\n  asset: realEstate,\n  supply: 1000000\n});'}
+            </div>
+            <div className="code-stream">
+              {'mapping(address => uint256) balances;\nevent Transfer(address, uint256);'}
+            </div>
+            <div className="code-stream">
+              {'require(msg.value >= minInvestment);\nbalances[investor] += tokens;'}
+            </div>
+          </div>
+        </div>
+        
         {children}
       </body>
     </html>
