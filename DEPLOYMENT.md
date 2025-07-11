@@ -46,10 +46,26 @@ EMAIL_PASS=your-sendgrid-api-key
 
 1. **Connect Repository**: Link your Git repository to Netlify
 2. **Build Settings**: 
-   - Build command: `npm run build`
-   - Publish directory: `.next`
-3. **Environment Variables**: Add the email configuration variables
+   - Build command: `npm run build` (auto-detected from netlify.toml)
+   - Publish directory: Auto-detected by @netlify/plugin-nextjs
+   - Functions directory: Auto-detected by @netlify/plugin-nextjs
+3. **Environment Variables**: Add the email configuration variables in Netlify dashboard
 4. **Deploy**: Netlify will automatically deploy when you push to your main branch
+
+### Important Notes
+
+- The project uses `@netlify/plugin-nextjs` for optimal Next.js deployment
+- API routes are automatically converted to Netlify Functions
+- No manual publish directory configuration needed
+- Static assets are optimized automatically
+
+### Troubleshooting
+
+If you get a 404 error:
+1. Ensure the `@netlify/plugin-nextjs` plugin is enabled
+2. Check that environment variables are set correctly
+3. Verify the build completed successfully
+4. Check Netlify function logs for API route errors
 
 ### Local Development
 
@@ -64,7 +80,7 @@ EMAIL_PASS=your-sendgrid-api-key
 - ✅ Next.js 15 with App Router
 - ✅ TypeScript support
 - ✅ Custom CSS styling
-- ✅ Email form submission
+- ✅ Email form submission via Netlify Functions
 - ✅ Responsive design
 - ✅ Production-ready build
-- ✅ Netlify optimized configuration 
+- ✅ Netlify optimized configuration with plugin 
