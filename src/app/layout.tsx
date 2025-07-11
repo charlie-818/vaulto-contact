@@ -33,19 +33,6 @@ export default function RootLayout({
         <meta name="color-scheme" content="dark" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        {/* Hidden form for Netlify build-time detection */}
-        <form name="intent-form" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-          <input type="text" name="form-name" />
-          <input type="text" name="goal" />
-          <input type="text" name="fullName" />
-          <input type="email" name="email" />
-          <input type="text" name="company" />
-          <input type="tel" name="phone" />
-          <input type="text" name="assetType" />
-          <input type="text" name="assetValue" />
-          <input type="text" name="investment" />
-        </form>
-        
         {/* Background Elements */}
         <div className="blockchain-bg">
           <div className="blockchain-grid"></div>
