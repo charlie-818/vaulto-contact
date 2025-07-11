@@ -581,22 +581,35 @@ body {
 }
 
 .modal-close {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
-  background: none;
-  border: none;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #333;
   color: #a1a1aa;
   cursor: pointer;
-  padding: 8px;
+  padding: 12px;
   border-radius: 50%;
   transition: all 0.3s ease;
-  z-index: 10;
+  z-index: 1001;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
 }
 
 .modal-close:hover {
-  background: #1a1a1a;
+  background: rgba(26, 26, 26, 0.9);
   color: #ffffff;
+  border-color: #3b82f6;
+  transform: scale(1.05);
+}
+
+.modal-close svg {
+  width: 20px;
+  height: 20px;
 }
 
 .modal-header {
@@ -779,89 +792,255 @@ body {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+  .modal-overlay {
+    padding: 10px;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  
   .modal-content {
-    margin: 10px;
-    max-height: 95vh;
+    margin: 0;
+    max-height: calc(100vh - 40px);
+    border-radius: 12px;
+  }
+  
+  .modal-close {
+    top: 30px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+  }
+  
+  .modal-close svg {
+    width: 18px;
+    height: 18px;
   }
   
   .modal-header {
-    padding: 30px 20px 15px;
+    padding: 30px 20px 20px;
   }
   
-  .modal-body {
-    padding: 40px 20px;
+  .modal-logo-img {
+    height: 40px;
   }
   
   .modal-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  
+  .modal-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  .modal-body {
+    padding: 30px 20px;
   }
   
   .modal-section {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   
-  .final-section {
-    padding: 40px 20px;
+  .section-title {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+  }
+  
+  .section-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
+  .section-text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
   }
   
   .benefits-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+    margin-top: 16px;
+  }
+  
+  .benefit-item {
+    padding: 16px 12px;
+    border-radius: 8px;
+  }
+  
+  .benefit-icon {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 8px;
+  }
+  
+  .benefit-item h3 {
+    font-size: 0.875rem;
+    margin-bottom: 4px;
+  }
+  
+  .benefit-item p {
+    font-size: 0.75rem;
+    line-height: 1.3;
   }
   
   .feature-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+    margin-top: 16px;
   }
   
-  .stats-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .feature-card {
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .feature-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .feature-card p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .process-steps {
+    margin-top: 16px;
+  }
+  
+  .process-step {
+    flex-direction: row;
+    text-align: left;
     gap: 12px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  
+  .step-content h3 {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+  
+  .step-content p {
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
   
   .tech-features {
     grid-template-columns: 1fr;
     gap: 16px;
+    margin-top: 16px;
+  }
+  
+  .tech-feature {
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .tech-feature h4 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+  
+  .inline-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+  }
+  
+  .tech-feature p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 16px;
+  }
+  
+  .stat-card {
+    padding: 12px 8px;
+    border-radius: 8px;
+  }
+  
+  .stat-card .stat-number {
+    font-size: 1.125rem;
+    margin-bottom: 4px;
+  }
+  
+  .stat-card .stat-label {
+    font-size: 0.75rem;
+    line-height: 1.2;
   }
   
   .platform-stats {
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    gap: 8px;
+    margin-top: 16px;
   }
   
-  .stablecoin-types {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  
-  .defi-stats {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 16px;
-  }
-  
-  .advantage-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  
-  .tech-stack {
-    gap: 12px;
-  }
-  
-  .market-summary {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  
-  .rwa-breakdown {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  
-  .process-step {
-    flex-direction: column;
+  .stat-item {
     text-align: center;
-    gap: 16px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 12px 8px;
+  }
+  
+  .stat-item .stat-number {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-bottom: 4px;
+  }
+  
+  .stat-item .stat-label {
+    font-size: 0.75rem;
+    color: #a1a1aa;
+    line-height: 1.2;
+  }
+  
+  .final-section {
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .final-section .section-title {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+  }
+  
+  .final-section .section-text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .modal-cta {
+    padding: 14px 24px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    margin-top: 16px;
   }
 }
 
