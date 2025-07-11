@@ -42,7 +42,7 @@ export default function IntentForm() {
       if (formData.assetValue) formDataToSubmit.append('assetValue', formData.assetValue);
       if (formData.investment) formDataToSubmit.append('investment', formData.investment);
 
-      await fetch('/__forms.html', {
+      await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formDataToSubmit as unknown as Record<string, string>).toString(),
@@ -132,6 +132,7 @@ export default function IntentForm() {
           <form 
             name="intent-form" 
             method="POST" 
+            action="/"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
