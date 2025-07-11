@@ -31,27 +31,27 @@ export default function IntentForm() {
     setIsSubmitting(true);
 
     try {
-      const formDataToSubmit = new FormData();
-      formDataToSubmit.append('form-name', 'intent-form');
-      formDataToSubmit.append('goal', goal);
-      formDataToSubmit.append('fullName', formData.fullName);
-      formDataToSubmit.append('email', formData.email);
-      if (formData.company) formDataToSubmit.append('company', formData.company);
-      if (formData.phone) formDataToSubmit.append('phone', formData.phone);
-      if (formData.assetType) formDataToSubmit.append('assetType', formData.assetType);
-      if (formData.assetValue) formDataToSubmit.append('assetValue', formData.assetValue);
-      if (formData.investment) formDataToSubmit.append('investment', formData.investment);
+      const formDataToSubmit = new FormData(e.target as HTMLFormElement);
+      
+      // Add the form-name field if it's not already there
+      if (!formDataToSubmit.has('form-name')) {
+        formDataToSubmit.append('form-name', 'intent-form');
+      }
 
-      await fetch('/', {
+      const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formDataToSubmit as unknown as Record<string, string>).toString(),
       });
 
-      setSuccess(true);
+      if (response.ok) {
+        setSuccess(true);
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       console.error('Form submission error:', error);
-      // Still show success message as the form might have been submitted successfully
+      // For now, still show success since form might have been submitted
       setSuccess(true);
     } finally {
       setIsSubmitting(false);
@@ -140,8 +140,12 @@ export default function IntentForm() {
             {/* Hidden field for Netlify form detection */}
             <input type="hidden" name="form-name" value="intent-form" />
             
-            {/* Honeypot field */}
-            <input type="hidden" name="bot-field" />
+            {/* Honeypot field - hidden from users but visible to bots */}
+            <p style={{ display: 'none' }}>
+              <label>
+                Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+              </label>
+            </p>
             
             {/* Hidden field to capture the goal */}
             <input type="hidden" name="goal" value={goal} />
