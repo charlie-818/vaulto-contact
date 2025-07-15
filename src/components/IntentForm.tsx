@@ -34,6 +34,11 @@ export default function IntentForm() {
       const form = e.target as HTMLFormElement;
       const formData = new FormData(form);
       
+      // Ensure form-name is included
+      if (!formData.has('form-name')) {
+        formData.append('form-name', 'intent-form');
+      }
+      
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

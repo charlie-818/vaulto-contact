@@ -6,6 +6,58 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
+      {/* Hidden form for Netlify detection - required for Next.js */}
+      <form
+        name="intent-form"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        style={{ display: 'none' }}
+      >
+        <input type="hidden" name="form-name" value="intent-form" />
+        <p style={{ display: 'none' }}>
+          <label>
+            Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+          </label>
+        </p>
+        <input type="hidden" name="goal" />
+        <input type="text" name="fullName" required />
+        <input type="email" name="email" required />
+        <input type="text" name="company" />
+        <input type="tel" name="phone" />
+        <select name="assetType">
+          <option value="">Select asset type</option>
+          <option value="Real Estate">Real Estate</option>
+          <option value="Art & Collectibles">Art & Collectibles</option>
+          <option value="Intellectual Property">Intellectual Property</option>
+          <option value="Commodities">Commodities</option>
+          <option value="Private Equity">Private Equity</option>
+          <option value="Bonds & Securities">Bonds & Securities</option>
+          <option value="Other">Other</option>
+        </select>
+        <select name="assetValue">
+          <option value="">Select value range</option>
+          <option value="$50K - $100K">$50K - $100K</option>
+          <option value="$100K - $500K">$100K - $500K</option>
+          <option value="$500K - $1M">$500K - $1M</option>
+          <option value="$1M - $5M">$1M - $5M</option>
+          <option value="$5M - $10M">$5M - $10M</option>
+          <option value="$10M+">$10M+</option>
+        </select>
+        <select name="investment">
+          <option value="">Select investment range</option>
+          <option value="$1K - $5K">$1K - $5K</option>
+          <option value="$5K - $10K">$5K - $10K</option>
+          <option value="$10K - $25K">$10K - $25K</option>
+          <option value="$25K - $50K">$25K - $50K</option>
+          <option value="$50K - $100K">$50K - $100K</option>
+          <option value="$100K - $500K">$100K - $500K</option>
+          <option value="$500K - $1M">$500K - $1M</option>
+          <option value="$1M+">$1M+</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+
       {/* Blockchain Background Animations */}
       <div className="blockchain-bg">
         <div className="blockchain-grid"></div>
