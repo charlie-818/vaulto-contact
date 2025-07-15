@@ -34,15 +34,22 @@ export default function IntentForm() {
       const form = e.target as HTMLFormElement;
       const formData = new FormData(form);
       
-      // Ensure form-name is included
-      if (!formData.has('form-name')) {
-        formData.append('form-name', 'intent-form');
+      // Ensure form-name is always included with correct value
+      formData.set('form-name', 'intent-form');
+      
+      // Convert FormData to URLSearchParams for proper encoding
+      const params = new URLSearchParams();
+      for (const [key, value] of formData.entries()) {
+        params.append(key, value as string);
       }
+      
+      // Debug: Log the form data being sent
+      console.log('Form submission data:', Object.fromEntries(params));
       
       const response = await fetch('/forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+        body: params.toString(),
       });
 
       if (response.ok) {
@@ -244,6 +251,8 @@ export default function IntentForm() {
                     required
                   >
                     <option value="">Select value range</option>
+                    <option value="$10K - $25K">$10K - $25K</option>
+                    <option value="$25K - $50K">$25K - $50K</option>
                     <option value="$50K - $100K">$50K - $100K</option>
                     <option value="$100K - $500K">$100K - $500K</option>
                     <option value="$500K - $1M">$500K - $1M</option>
@@ -273,10 +282,6 @@ export default function IntentForm() {
                   <option value="$5K - $10K">$5K - $10K</option>
                   <option value="$10K - $25K">$10K - $25K</option>
                   <option value="$25K - $50K">$25K - $50K</option>
-                  <option value="$50K - $100K">$50K - $100K</option>
-                  <option value="$100K - $500K">$100K - $500K</option>
-                  <option value="$500K - $1M">$500K - $1M</option>
-                  <option value="$1M+">$1M+</option>
                 </select>
               </div>
             )}
