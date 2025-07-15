@@ -37,7 +37,7 @@ export default function IntentForm() {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(),
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
       });
 
       if (response.ok) {
@@ -130,7 +130,7 @@ export default function IntentForm() {
             {/* Honeypot field - hidden from users but visible to bots */}
             <p style={{ display: 'none' }}>
               <label>
-                Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+                {'Don\'t fill this out if you\'re human: '}<input name="bot-field" />
               </label>
             </p>
             
