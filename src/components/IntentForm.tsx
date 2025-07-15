@@ -256,9 +256,7 @@ export default function IntentForm() {
                     <option value="$50K - $100K">$50K - $100K</option>
                     <option value="$100K - $500K">$100K - $500K</option>
                     <option value="$500K - $1M">$500K - $1M</option>
-                    <option value="$1M - $5M">$1M - $5M</option>
-                    <option value="$5M - $10M">$5M - $10M</option>
-                    <option value="$10M+">$10M+</option>
+                    <option value="$1M+">$1M+</option>
                   </select>
                 </div>
               </>
@@ -330,22 +328,13 @@ export default function IntentForm() {
                     <path d="M2 17l10 5 10-5"/>
                     <path d="M2 12l10 5 10-5"/>
                   </svg>
-                  What is Asset Tokenization?
+                  What is Tokenization?
                 </h2>
                 <p className="section-text">
                   Asset tokenization is the process of converting rights to an asset into a digital token on a blockchain. This revolutionary approach enables fractional ownership, enhanced liquidity, and global accessibility for traditionally illiquid assets.
                 </p>
                 
                 <div className="benefits-grid">
-                  <div className="benefit-item">
-                    <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                      <path d="M2 17l10 5 10-5"/>
-                      <path d="M2 12l10 5 10-5"/>
-                    </svg>
-                    <h3>Enhanced Liquidity</h3>
-                    <p>Convert illiquid assets into tradeable digital tokens</p>
-                  </div>
                   <div className="benefit-item">
                     <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <circle cx="12" cy="12" r="3"/>
@@ -362,24 +351,15 @@ export default function IntentForm() {
                     <h3>Global Access</h3>
                     <p>Reach international investors and expand your market</p>
                   </div>
-                  <div className="benefit-item">
-                    <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                      <circle cx="12" cy="16" r="1"/>
-                      <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                    </svg>
-                    <h3>Secure & Transparent</h3>
-                    <p>Blockchain technology ensures security and transparency</p>
-                  </div>
                 </div>
               </section>
 
               <section className="modal-section">
                 <h2 className="section-title">
                   <svg className="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M9 11H5a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h4m-4-6l4-4m0 0l4 4m-4-4v12"/>
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>
-                  Key Benefits for Asset Owners
+                  Benefits for Asset Owners
                 </h2>
                 <p className="section-text">
                   Transform your assets into digital tokens and unlock new opportunities in the global marketplace. Our platform provides everything you need for secure, compliant tokenization.
@@ -395,14 +375,9 @@ export default function IntentForm() {
                     <h3>Instant Liquidity</h3>
                     <p>Convert traditionally illiquid assets into tradeable digital tokens</p>
                   </div>
-                  <div className="feature-card">
-                    <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <circle cx="12" cy="12" r="10"/>
-                      <path d="M12 6v6l4 2"/>
-                    </svg>
-                    <h3>24/7 Trading</h3>
-                    <p>Enable round-the-clock trading and global market access</p>
-                  </div>
+                 
+                    
+          
                   <div className="feature-card">
                     <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
@@ -504,7 +479,7 @@ export default function IntentForm() {
                     <div className="step-number">4</div>
                     <div className="step-content">
                       <h3>Market Launch</h3>
-                      <p>List tokens on our platform and begin trading with global investors</p>
+                      <p>List tokens on DEXs and begin trading with global investors</p>
                     </div>
                   </div>
                 </div>
@@ -519,21 +494,21 @@ export default function IntentForm() {
                   Market Opportunity
                 </h2>
                 <p className="section-text">
-                  The tokenization market is experiencing unprecedented growth, with trillions of dollars in assets ready for digitization.
+                  Real-world asset tokenization is experiencing explosive growth, with billions of dollars already tokenized across various asset classes.
                 </p>
                 
                 <div className="platform-stats">
                   <div className="stat-item">
-                    <span className="stat-number">$867T</span>
-                    <span className="stat-label">Total Addressable Market</span>
+                    <span className="stat-number">$234.9B</span>
+                    <span className="stat-label">Stablecoins</span>
                   </div>
                   <div className="stat-item">
-                    <span className="stat-number">$3.7T</span>
-                    <span className="stat-label">Real Estate Tokenization</span>
+                    <span className="stat-number">$13.25B</span>
+                    <span className="stat-label">Private Credit</span>
                   </div>
                   <div className="stat-item">
-                    <span className="stat-number">45%</span>
-                    <span className="stat-label">Annual Growth Rate</span>
+                    <span className="stat-number">$7.1B</span>
+                    <span className="stat-label">Treasury Debt</span>
                   </div>
                 </div>
               </section>
