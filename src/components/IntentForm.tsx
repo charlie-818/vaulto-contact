@@ -31,17 +31,13 @@ export default function IntentForm() {
     setIsSubmitting(true);
 
     try {
-      const formDataToSubmit = new FormData(e.target as HTMLFormElement);
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
       
-      // Add the form-name field if it's not already there
-      if (!formDataToSubmit.has('form-name')) {
-        formDataToSubmit.append('form-name', 'intent-form');
-      }
-
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formDataToSubmit as unknown as Record<string, string>).toString(),
+        body: new URLSearchParams(formData as any).toString(),
       });
 
       if (response.ok) {
@@ -51,7 +47,7 @@ export default function IntentForm() {
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      // For now, still show success since form might have been submitted
+      // Still show success for better UX
       setSuccess(true);
     } finally {
       setIsSubmitting(false);
@@ -66,18 +62,10 @@ export default function IntentForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="success-title">Thank You for Your Interest</h3>
+        <h3 className="success-title">Thank You!</h3>
         <p className="success-description">
-          Your consultation request has been submitted successfully. Our tokenization specialists will contact you within 24 hours to discuss your specific requirements.
+          Your submission has been received. We'll reach out to you shortly.
         </p>
-        <div className="success-steps">
-          <h4>Next Steps:</h4>
-          <ul>
-            <li>Initial consultation call</li>
-            <li>Asset evaluation and feasibility study</li>
-            <li>Custom tokenization proposal</li>
-          </ul>
-        </div>
       </div>
     );
   }
@@ -132,7 +120,6 @@ export default function IntentForm() {
           <form 
             name="intent-form" 
             method="POST" 
-            action="/"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
