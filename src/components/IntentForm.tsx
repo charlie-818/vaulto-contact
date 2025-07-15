@@ -64,7 +64,7 @@ export default function IntentForm() {
         </div>
         <h3 className="success-title">Thank You!</h3>
         <p className="success-description">
-          Your submission has been received. We'll reach out to you shortly.
+          Your submission has been received. We&apos;ll reach out to you shortly.
         </p>
       </div>
     );
