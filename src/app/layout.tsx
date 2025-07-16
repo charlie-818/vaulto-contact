@@ -33,50 +33,28 @@ export default function RootLayout({
         <meta name="color-scheme" content="dark" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        {/* Background Elements */}
-        <div className="blockchain-bg">
-          <div className="blockchain-grid"></div>
-          <div className="floating-blocks">
-            <div className="block"></div>
-            <div className="block"></div>
-            <div className="block"></div>
-            <div className="block"></div>
-            <div className="block"></div>
-            <div className="block"></div>
+        {/* Static Blockchain Grid Background */}
+        <div className="blockchain-grid"></div>
+        
+        {/* Code Matrix Background */}
+        <div className="code-matrix">
+          <div className="code-stream">
+            {'function tokenize(asset) {\n  return blockchain.mint(asset);\n}'}
           </div>
-          <div className="connection-lines">
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
+          <div className="code-stream">
+            {'const value = asset.getValue();\nconst tokens = value / sharePrice;'}
           </div>
-          <div className="token-particles">
-            <div className="particle"></div>
-            <div className="particle"></div>
-            <div className="particle"></div>
-            <div className="particle"></div>
-            <div className="particle"></div>
-            <div className="particle"></div>
+          <div className="code-stream">
+            {'if (verified) {\n  transfer(tokens, investor);\n}'}
           </div>
-          <div className="code-matrix">
-            <div className="code-stream">
-              {'function tokenize(asset) {\n  return blockchain.mint(asset);\n}'}
-            </div>
-            <div className="code-stream">
-              {'const value = asset.getValue();\nconst tokens = value / sharePrice;'}
-            </div>
-            <div className="code-stream">
-              {'if (verified) {\n  transfer(tokens, investor);\n}'}
-            </div>
-            <div className="code-stream">
-              {'contract.deploy({\n  asset: realEstate,\n  supply: 1000000\n});'}
-            </div>
-            <div className="code-stream">
-              {'mapping(address => uint256) balances;\nevent Transfer(address, uint256);'}
-            </div>
-            <div className="code-stream">
-              {'require(msg.value >= minInvestment);\nbalances[investor] += tokens;'}
-            </div>
+          <div className="code-stream">
+            {'contract.deploy({\n  asset: realEstate,\n  supply: 1000000\n});'}
+          </div>
+          <div className="code-stream">
+            {'mapping(address => uint256) balances;\nevent Transfer(address, uint256);'}
+          </div>
+          <div className="code-stream">
+            {'require(msg.value >= minInvestment);\nbalances[investor] += tokens;'}
           </div>
         </div>
         
